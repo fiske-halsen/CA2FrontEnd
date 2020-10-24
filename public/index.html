@@ -47,56 +47,84 @@
         <h3>Ex-3</h3>
         <p>Add your basic HTML for Exercise 3 here</p>
 
-        <div class="row" style="min-height: 5em;"">
-      <div class=" col-md-8 pre-scrollable" style="background-color: lightgrey;">
-          <h5>All Users</h5>
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Id</th>
-                <th>Age</th>
-                <th>Name
-                <th>
-                <th>Gender</th>
-                <th>Email </th>
-            </thead>
-            <tbody id="allUserRows">
-            <tbody>
-          </table>
-        </div>
-        <div class="col-md-4" style="background-color: powderblue;">
-          <h5>Find User</h5>
-        </div>
-      </div>
-      <div class="row" style="min-height: 5em;">
-        <div class="col-md-4" style="background-color: powderblue;">
-          <h5>Add User</h5>
-        </div>
-        <div class="col-md-4" style="background-color: lightgrey;">
-          <h5>Edit User</h5>
-        </div>
-        <div class="col-md-4" style="background-color: powderblue;">
-          <h5>Delete User</h5>
-        </div>
-      </div>
-      <!-- </div> -->
-      <!-- End of HTML for exercise-3 -->
+        <div class="row" style="min-height: 5em;">
+          <div class=" col-md-10 pre-scrollable" style="background-color: lightgrey;">
+            <h5>Persons</h5>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>FirstName</th>
+                  <th>LastName
+                  <th>
+                  <th>Email</th>
+                  <th>Street</th>
+                  <th>City</th>
+                  <th>Zip</th>
+                  <th>Hobbies</th>
+                  <th>Phones</th>
+              </thead>
+              <tbody id="allPersonRows">
+              <tbody>
+            </table>
+          </div>
 
-      <!---- HTML for the About page -->
-      <div id="about_html" style="display:none;">
-        <h3>About</h3>
-        <p>Watch the small video given as intro to this code, BEFORE you start using it</p>
-      </div>
-      <!-- End of HTML for ABOUT Page -->
 
+          <div></div>
+          <form>
+            <label for="personshobby">Get persons by hobby</label><br>
+            <input type="text" id="hobby" name="hobby" value="Indtast hobby"><br>
+            <input type="submit" id="submithobby" value="Submit">
+          </form>
+
+          <form>
+            <label for="newjoke">Add new joke</label><br>
+            <input type="text" id="newjoke" name="joke" value="Indtast ny joke"><br>
+            <input type="submit" id="submitnewjoke" value="Submit">
+          </form>
+
+          <form>
+            <label for="newjoke">Add new joke</label><br>
+            <input type="text" id="newjoke" name="joke" value="Indtast ny joke"><br>
+            <input type="submit" id="submitnewjoke" value="Submit">
+          </form>
+
+        </div>
+
+
+        <div>
+          <p id="error" style="color: red">sssssss </p>
+        </div>
+
+
+
+        <div class="row" style="min-height: 5em;">
+          <div class="col-md-5" style="background-color: powderblue;">
+            <h5>Add User</h5>
+          </div>
+          <div class="col-md-5" style="background-color: lightgrey;">
+            <h5>Edit User</h5>
+          </div>
+
+        </div>
+        <!-- </div> -->
+        <!-- End of HTML for exercise-3 -->
+
+        <!---- HTML for the About page -->
+        <div id="about_html" style="display:none;">
+          <h3>About</h3>
+          <p>Watch the small video given as intro to this code, BEFORE you start using it</p>
+        </div>
+        <!-- End of HTML for ABOUT Page -->
+
+      </div>
+
+      <!--End of all content -->
     </div>
 
-    <!--End of all content -->
-  </div>
-
-  <!-- #################################################################-->
-  <!-- IMPORTANT  DO NOT IMPORT ANY JavaScript in this file by YOURSELF -->
-  <!-- #################################################################-->
+    <!-- #################################################################-->
+    <!-- IMPORTANT  DO NOT IMPORT ANY JavaScript in this file by YOURSELF -->
+    <!-- #################################################################-->
 
 </body>
 
