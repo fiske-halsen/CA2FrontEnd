@@ -1,5 +1,5 @@
-//const URL = "https://www.mandenderkoder.com/CA2/api/person/"
-const URL = "http://localhost:8080/jpareststarter/api/person/"
+const URL = "https://www.mandenderkoder.com/CA2/api/person/"
+//const URL = "http://localhost:8080/jpareststarter/api/person/"
 
 function getPersonsByHobby(hobby) {
     return fetch(URL + "hobby/" + hobby)
