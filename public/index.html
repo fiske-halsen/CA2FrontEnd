@@ -48,7 +48,7 @@
         <p>Add your basic HTML for Exercise 3 here</p>
 
         <div class="row" style="min-height: 5em;">
-          <div class=" col-md-10 pre-scrollable" style="background-color: lightgrey;">
+          <div class=" col-md-12 pre-scrollable" style="background-color: lightgrey;">
             <h5>Persons</h5>
             <table class="table">
               <thead>
@@ -70,41 +70,88 @@
           </div>
 
 
-          <div></div>
+          <div>
           <form>
             <label for="personshobby">Get persons by hobby</label><br>
-            <input type="text" id="hobby" name="hobby" value="Indtast hobby"><br>
+            <input type="text" id="hobby" name="hobby" autocomplete="off" value="Indtast hobby"><br>
             <input type="submit" id="submithobby" value="Submit">
           </form>
 
+         
+
           <form>
-            <label for="newjoke">Add new joke</label><br>
-            <input type="text" id="newjoke" name="joke" value="Indtast ny joke"><br>
-            <input type="submit" id="submitnewjoke" value="Submit">
+            <label for="personscity">Get persons by city</label><br>
+            <input type="text" id="city" name="city" autocomplete="off" value="Indtast by"><br>
+            <input type="submit" id="submitcity" value="Submit">
           </form>
 
           <form>
-            <label for="newjoke">Add new joke</label><br>
-            <input type="text" id="newjoke" name="joke" value="Indtast ny joke"><br>
-            <input type="submit" id="submitnewjoke" value="Submit">
+            <label for="personphone">Get person by phonenumber</label><br>
+            <input type="text" id="phone" name="phone" autocomplete="off" value="Indtast tlf. nr"><br>
+            <input type="submit" id="submitphone" value="Submit">
           </form>
-
         </div>
-
-
-        <div>
-          <p id="error" style="color: red">sssssss </p>
         </div>
-
-
 
         <div class="row" style="min-height: 5em;">
-          <div class="col-md-5" style="background-color: powderblue;">
-            <h5>Add User</h5>
+          <div class="col-md-3" style="background-color: powderblue;">
+            <h5>Add Person</h5>
+            <form>        
+              <input type="text" id="addfname" name="phone" autocomplete="off" value="Indtast fornavn"><br>
+              <input type="text" id="addlname" name="phone" autocomplete="off" value="Indtast efternavn"><br>
+              <input type="text" id="addemail" name="phone" autocomplete="off" value="Indtast email"><br>
+              <input type="text" id="addstreet" name="phone" autocomplete="off" value="Indtast vej"><br>
+              <input type="text" id="addzip" name="phone"  value="Indtast postnummer"><br>
+              <input type="text" id="addhobby" name="phone"  value="Indtast hobby"><br>
+              <input type="text" id="addhobbydescription" name="phone"  value="Indtast hobbybeskrivelse"><br>
+              <input type="text" id="addphone" name="phone"  value="Indtast telefonnummer"><br>
+              <input type="text" id="addphonedescription" name="phone"  value="Indtast telefonbeskrivelse"><br>
+              <input type="submit" id="submitadd" value="Submit">
+            </form>
+         
+
+
+
+
+
+            
+
           </div>
-          <div class="col-md-5" style="background-color: lightgrey;">
-            <h5>Edit User</h5>
+          <div class="col-md-3" style="background-color: lightgrey;">
+            <h5>Edit Person</h5>
+            <form>
+              <input type="text" id="editid" name="phone" autocomplete="off" value="Indtast id"><br>
+              <input type="text" id="editfname" name="phone" autocomplete="off" value="Indtast fornavn"><br>
+              <input type="text" id="editlname" name="phone" autocomplete="off" value="Indtast efternavn"><br>
+              <input type="text" id="editemail" name="phone" autocomplete="off" value="Indtast email"><br>
+              <input type="text" id="editstreet" name="phone" autocomplete="off" value="Indtast vej"><br>
+              <input type="text" id="editzip" name="phone"  value="Indtast postnummer"><br>
+              <input type="submit" id="submitedit" value="Submit">
+            </form>
           </div>
+          <div class="col-md-3" id ="hobbycounttag" style="background-color: powderblue;">
+            <h5>Get the number of people by a hobby</h5>
+
+            <p id="count"></p>
+            <form>
+              <label for="personshobby">Get the amount of people by hobby</label><br>
+              <input type="text" id="hobbycount" name="hobby" autocomplete="off" value="Indtast hobby"><br>
+              <input type="submit" id="submithobbycount" value="Submit">
+            </form>
+          </div>
+          <div class="col-md-3" style="background-color: lightgrey;">
+            <h5>Get all zips in Denmark</h5>
+            <p id="ziptag">
+
+
+            </p>
+            <input type="submit" id="submitzip" value="Submit">
+          </div>
+
+          <div>
+            <p id="error" style="color: red"></p>
+          </div>
+
 
         </div>
         <!-- </div> -->

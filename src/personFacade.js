@@ -9,7 +9,7 @@ function getPersonsByHobby(hobby) {
 }
 
 function getPersonsByCity(city) {
-    return fetch(URL + "city/" + city)
+    return fetch(URL + "persons/" + city)
         .then(res => res.json())
 }
 
@@ -19,8 +19,8 @@ function getPersonByPhone(phoneNumber) {
 }
 
 function getPeopleCountByHobby(hobby) {
-    return fetch(URL + "personcount/" + hobby)
-     e   .then(res => res.json())
+    return fetch(URL + "peoplecount/" + hobby)
+        .then(res => res.json())
 }
 
 function getAllZipCodes(){
@@ -35,9 +35,9 @@ function addPerson(person) {
         .then(handleHttpErrors)
 }
 
-function editUser(person) {
+function editPerson(person) {
     const options = makeOptions("PUT", person)
-    return fetch(URL + "edit/" + user.id, options)
+    return fetch(URL + "edit/" + person.id, options)
         .then(handleHttpErrors)
 }
 
@@ -49,7 +49,7 @@ const personFacade = {
     getPersonByPhone,
     getPeopleCountByHobby,
     getAllZipCodes,
-    editUser
+    editPerson
 }
 
 function makeOptions(method, body) {
