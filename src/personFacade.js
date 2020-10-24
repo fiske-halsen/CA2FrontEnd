@@ -1,8 +1,11 @@
-const URL = "https://www.mandenderkoder.com/CA2/api/person/"
+//const URL = "https://www.mandenderkoder.com/CA2/api/person/"
+const URL = "http://localhost:8080/jpareststarter/api/person/"
 
 function getPersonsByHobby(hobby) {
     return fetch(URL + "hobby/" + hobby)
-        .then(res => res.json())
+        .then(res => res.json()
+        )
+   
 }
 
 function getPersonsByCity(city) {
@@ -17,7 +20,7 @@ function getPersonByPhone(phoneNumber) {
 
 function getPeopleCountByHobby(hobby) {
     return fetch(URL + "personcount/" + hobby)
-        .then(res => res.json())
+     e   .then(res => res.json())
 }
 
 function getAllZipCodes(){
