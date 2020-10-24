@@ -17,6 +17,7 @@ document.getElementById("all-content").style.display = "block";
 
 
 function fetchPersonsToTableByHobby() {
+  document.getElementById("error").innerText = "";
   let hobbyName = document.getElementById("hobby").value;
 
   personFacade.getPersonsByHobby(hobbyName).
@@ -49,6 +50,7 @@ function fetchPersonsToTableByHobby() {
 }
 
 function fetchPersonsToTableByCity(){
+  document.getElementById("error").innerText = "";
   let cityName = document.getElementById("city").value;
 
   personFacade.getPersonsByCity(cityName)
@@ -82,6 +84,7 @@ function fetchPersonsToTableByCity(){
 
 }
 function fetchPersonsCountToTableByHobby() {
+  document.getElementById("error").innerText = "";
   let hobbyName = document.getElementById("hobbycount").value;
 
   personFacade.getPeopleCountByHobby(hobbyName)
@@ -121,7 +124,7 @@ function fetchAllZipCodes() {
 
 function fetchPersonToTableByPhone(){
   let phoneNumber = document.getElementById("phone").value;
-
+  document.getElementById("error").innerText = "";
   personFacade.getPersonByPhone(phoneNumber)
   .then(person => {
      
@@ -155,6 +158,7 @@ function fetchPersonToTableByPhone(){
 }
 
 function editPerson(){
+  document.getElementById("error").innerText = "";
   let id = document.getElementById("editid").value;
   let fName = document.getElementById("editfname").value;
   let lName = document.getElementById("editlname").value;
@@ -267,8 +271,6 @@ the Period2-week2-day3 Exercises
 
 function hideAllShowOne(idToShow) {
   document.getElementById("about_html").style = "display:none";
-  document.getElementById("ex1_html").style = "display:none";
-  document.getElementById("ex2_html").style = "display:none";
   document.getElementById("ex3_html").style = "display:none";
   document.getElementById(idToShow).style = "display:block";
 }
@@ -276,12 +278,6 @@ function hideAllShowOne(idToShow) {
 function menuItemClicked(evt) {
   const id = evt.target.id;
   switch (id) {
-    case "ex1":
-      hideAllShowOne("ex1_html");
-      break;
-    case "ex2":
-      hideAllShowOne("ex2_html");
-      break;
     case "ex3":
       hideAllShowOne("ex3_html");
       break;
