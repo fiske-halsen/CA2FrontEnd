@@ -1,41 +1,52 @@
-const URL = "https://www.mandenderkoder.com/devops-starter/api/person"
+const url = "https://www.mandenderkoder.com/devops-starter/api/person/"
 
-function getPersonsByHobby() {
-    return fetch(URL)
+function getPersonsByHobby(hobby) {
+    return fetch(URL + "hobby/" + hobby)
         .then(res => res.json())
 }
 
-function getAllPersonsByCity(city) {
-    return fetch(URL + id)
+function getPersonsByCity(city) {
+    return fetch(URL + "city/" + city)
         .then(res => res.json())
-
 }
 
-function addUser(user) {
-    const options = makeOptions("POST", user)
-    return fetch(URL, options)
+function getPersonByPhone(phoneNumber) {
+    return fetch(URL + "personphone/" + phoneNumber)
+        .then(res => res.json())
+}
+
+function getPeopleCountByHobby(hobby) {
+    return fetch(URL + "personcount/" + hobby)
+        .then(res => res.json())
+}
+
+function getAllZipCodes(){
+    return fetch(URL + "zip")
+    .then(res => res.json())
+}
+
+
+function addPerson(person) {
+    const options = makeOptions("POST", person)
+    return fetch(URL + "add", options)
         .then(handleHttpErrors)
 }
 
-function editUser(user) {
-    const options = makeOptions("PUT", user)
-    return fetch(URL + user.id, options)
+function editUser(person) {
+    const options = makeOptions("PUT", person)
+    return fetch(URL + "edit/" + user.id, options)
         .then(handleHttpErrors)
 }
 
-function deleteUser(id) {
-    const options = makeOptions("DELETE")
-    return fetch(URL + id, options)
-        .then(handleHttpErrors)
-
-}
-
-const userFacade = {
-    getUsers,
-    getUser,
-    addUser,
-    editUser,
-    deleteUser
+const personFacade = {
+    getPersonsByHobby,
+    getPeopleCountByHobby,
+    getPersonsByCity,
+    addPerson,
+    getPersonByPhone,
+    getPeopleCountByHobby,
+    getAllZipCodes,
+    editUser
 }
 
 function makeOptions(method, body) {
@@ -60,4 +71,5 @@ function handleHttpErrors(res) {
     return res.json();
 }
 
-export default userFacade;
+export default personFacade;
+

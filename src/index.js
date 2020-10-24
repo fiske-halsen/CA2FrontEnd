@@ -1,7 +1,7 @@
 import "./style.css"
 import "bootstrap/dist/css/bootstrap.css"
-import "./jokeFacade"
-import jokeFacade from "./jokeFacade"
+import "./personFacade"
+import personFacade from "./personFacade"
 
 document.getElementById("all-content").style.display = "block"
 
@@ -17,6 +17,45 @@ document.getElementById("all-content").style.display = "block"
 
 
 /* JS For Exercise-3 below */
+function fetchUsersToTableByHobby() {
+
+let hobbyName = document.getElementById("hobby").value()
+
+
+ personFacade.getPersonsByHobby(hobbyName)
+    .then(person => {
+
+      const personRows = person.map(person => `<tr>
+  <td>${person.id}</td>
+  <td>${person.fName}</td>
+  <td>${person.lName}</td>
+  <td>${person.email}</td>
+  <td>${person.street}</td>
+  <td>${person.zip}</td>
+  <td>${person.city}</td>
+  <td>${person.hobbies}</td>
+  <td>${person.phones}</td>
+
+  </tr>`)
+
+      const personRowsAsString = personRows.join("")
+      document.getElementById("allUserRows").innerHTML = personRowsAsString;
+
+    }).catch(err => {
+      if (err.status) {
+        err.fullError.then(e => document.getElementById("error").innerText = e.msg)
+      }
+      else { console.log("Network error"); }
+    });
+}
+
+
+
+
+
+
+
+
 
 
 /* 
