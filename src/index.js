@@ -21,11 +21,10 @@ function fetchUsersToTableByHobby() {
 
 let hobbyName = document.getElementById("hobby").value()
 
-
  personFacade.getPersonsByHobby(hobbyName)
     .then(person => {
 
-      const personRows = person.map(person => `<tr>
+let personRows = person.map(person => `<tr>
   <td>${person.id}</td>
   <td>${person.fName}</td>
   <td>${person.lName}</td>
@@ -39,15 +38,20 @@ let hobbyName = document.getElementById("hobby").value()
   </tr>`)
 
       const personRowsAsString = personRows.join("")
-      document.getElementById("allUserRows").innerHTML = personRowsAsString;
+      document.getElementById("allPersonRows").innerHTML = personRowsAsString;
 
-    }).catch(err => {
-      if (err.status) {
-        err.fullError.then(e => document.getElementById("error").innerText = e.msg)
-      }
-      else { console.log("Network error"); }
-    });
+    })
 }
+
+
+document.getElementById("submithobby").addEventListener("click", event =>{
+  event.preventDefault()
+  fetchUsersToTableByHobby()
+
+}) 
+
+
+
 
 
 

@@ -1,4 +1,4 @@
-const url = "https://www.mandenderkoder.com/devops-starter/api/person/"
+const URL = "https://www.mandenderkoder.com/CA2/api/person/"
 
 function getPersonsByHobby(hobby) {
     return fetch(URL + "hobby/" + hobby)
